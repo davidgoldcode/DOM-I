@@ -48,28 +48,55 @@ title.textContent = 'Great Idea!'
 console.log(title);
 
 // select anchor tags in nav bar
-const mySelection = document.querySelectorAll('a')
-console.log(mySelection);
 
-mySelection[0].textContent = 'Services';
-console.log(mySelection[0])
+const myAnchors = document.querySelectorAll('a')
 
-mySelection[1].textContent = 'Product';
-console.log(mySelection[1])
 
-mySelection[2].textContent = 'Vision';
-console.log(mySelection[2])
+myAnchors[0].textContent = 'Services';
+console.log(myAnchors[0])
 
-mySelection[3].textContent = 'Features';
-console.log(mySelection[3])
+myAnchors[1].textContent = 'Product';
+console.log(myAnchors[1])
 
-mySelection[4].textContent = 'About';
-console.log(mySelection[4])
+myAnchors[2].textContent = 'Vision';
+console.log(myAnchors[2])
 
-mySelection[5].textContent = 'Contact';
-console.log(mySelection[5])
+myAnchors[3].textContent = 'Features';
+console.log(myAnchors[3])
 
-// to try to automate later
+myAnchors[4].textContent = 'About';
+console.log(myAnchors[4])
+
+myAnchors[5].textContent = 'Contact';
+console.log(myAnchors[5])
+
+// add to nav bar
+const navBar = document.querySelector('nav')
+
+const moreInfo = document.createElement('a')
+moreInfo.setAttribute('href', '#');
+moreInfo.textContent = 'Info';
+moreInfo.style.color = 'Green';
+console.log(moreInfo);
+
+const home = document.createElement('a');
+home.setAttribute('href', '#');
+home.textContent = 'Home';
+home.style.color = 'Green';
+console.log(home);
+console.log(navBar);
+
+navBar.prepend(home);
+navBar.appendChild(moreInfo);
+
+console.log(navBar);
+
+// change nav color
+console.log(myAnchors);
+
+myAnchors.forEach(link => (link.style.color = 'green'))
+
+
 
 // Add to h1
 const h1Text = document.querySelector('h1')
